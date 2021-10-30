@@ -10,32 +10,27 @@
 // console.log(`processs.argv`, process.argv)
 // process.argv 可以拿到node的进程的参数 会出现在argv数组的最后一项
 
-
-var palyerAction = process.argv[process.argv.length - 1]
+var palyerAction = process.argv[process.argv.length - 1];
 console.log(' palyerAction:>> ', palyerAction);
 
-
-let random = Math.random() * 3
+let random = Math.random() * 3;
 
 if (random < 1) {
-	palyerAction = 'rock'
+  var computerAction = 'rock';
 } else if (random > 2) {
-	
-	palyerAction = 'sessior'
+  var computerAction = 'sessior';
 } else {
-	palyerAction = 'paper'
+  var computerAction = 'paper';
 }
 
-if (palyerAction === random) {
-	console.log('平局')
-} else if {
-	(palyerAction === 'rock' && random === 'paper') ||
-	(palyerAction === 'sessior' && random === 'rock') ||
-	(palyerAction === 'paper' && random === 'sessior')
-
-}	{
-				console.log('你赢了')
+if (palyerAction === computerAction) {
+  console.log('平局');
+} else if (
+  (computerAction === 'rock' && palyerAction === 'paper') ||
+  (computerAction === 'sessior' && palyerAction === 'rock') ||
+  (computerAction === 'paper' && palyerAction === 'sessior')
+) {
+  console.log('你赢了');
 } else {
-	console.log('你输了')
+  console.log('你输了');
 }
-
